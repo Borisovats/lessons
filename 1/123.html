@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница</title>
+        <script>
+        window.addEventListener("load",function(){
+            let n = document.getElementById("name");
+            let a = document.getElementById("pw");
+            let c = document.getElementById("check");
+            c.addEventListener("click", function(){
+                if (a.value === "govno" && n.value !== ""){
+                    alert("Успех");}
+                else{
+                    alert("Не указано имя или введен неверный пароль");
+                };
+            });
+        })
+        
+    </script>
+    <style>
+        body{background-color: rgba(170, 159, 32, 0.103);
+            }
+        
+        p{
+            font-size: 30px;
+            width: 800px;
+            height: 80px;
+            margin: 0 auto;
+            font-weight: bolder;
+            text-align: center;
+            background-color: rgba(40, 119, 93, 0.263);  
+        
+
+        }
+        input[type="text"]{
+            height: 30px;
+            width:40%;
+            font-size: 20px;
+        }
+        input[type="password"]{
+            height: 30px;
+            width:40%;
+            font-size: 20px;
+        }
+        #check{
+            font-size: 30px;
+            font-weight: unset;
+            width: 300px;
+            height: 50px;
+            background-color: rgb(255, 255, 255);
+            border: 2px;
+            border-style:solid;
+            border-radius: 10px;
+            border-color: black;
+            }
+        #check:hover{
+            background-color: rgba(40, 119, 93, 0.601);
+        }
+        #check:active{
+            background-color: #00000084;
+        }
+        div{
+            margin-top: 10%;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>
+        <p>Введи имя:
+        <input type="text", id="name">
+        </p>
+        <p>Введи пароль:
+        <input type="password",
+        height="50",
+        id="pw">
+        </p>
+        <p>
+        <button id="check">Тук-тук</button>
+        </p>
+    </div>
+
+
+</body>
+</html>

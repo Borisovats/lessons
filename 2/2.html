@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Страница</title>
+    <style>
+        *{
+            box-sizing: border-box
+        }
+        @font-face {
+            font-family: "Open Sans";
+            src: url("OpenSans-VariableFont_wdth,wght.ttf");
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+            }
+        body{
+            background-color: rgb(0, 133, 168);
+            font-family:  "Open Sans", sans-serif;
+            display:block;
+        }
+        #container{
+            margin: 10px auto;
+            background-color: rgb(255,255,255);
+            height: 700px;
+            width:600px;
+            border-radius: 10px;
+            padding: 0px 50px;
+            text-align: center;
+
+        }
+
+        #log{
+            height: 90px;
+            font-weight:200;
+            font-size: 26px; 
+            padding-top: 60px;
+        }
+        .name_of_field{
+            height: 50px;
+            padding-left: 20px;
+            text-align: left;
+            font-weight: 200;
+            font-size: 22px;  
+            margin-bottom: 0px;
+            padding-top: 20px;
+        }
+        .show_password{
+            height: 50px;
+            padding-top: 20px;
+            text-align: left;
+            font-size: 22px;  
+            font-style: 200;
+        }
+
+
+        input[type="checkbox"] {
+            width: 20px;
+            height:20px;
+            margin-right: 10px;}
+        .input_field{
+            height: 70px;
+            width: 100%;
+            text-align: left;
+            font-weight: 200;
+            font-size: 22px;  
+            border: 3px solid rgb(229,228,234) ;
+            
+        }
+
+        #check{
+            background-color: rgb(0,115,152);
+            height: 70px;   
+            width: 100%;
+            font-size: 22px;  
+            color: rgb(255, 255, 255);
+        }
+        .links{
+            height: 50px;
+            padding-left: 50px;
+            padding-top: 10px;
+            font-size: 22px;  
+
+        }
+    
+    a{
+        color: rgb(0, 133, 168);
+        text-decoration: none;
+        
+    }
+    #check:hover{
+            background-color: rgb(0, 133, 168);
+        }
+    ::placeholder{
+        color: rgb(164,163,162);
+        font-weight: normal;
+        font-size: 22px;
+        padding-left: 30px;
+    }
+    #forgot{
+        margin-top: 30px;
+    }
+
+    </style>
+        <script>
+        window.addEventListener("load",function(){
+            let doc = document.getElementById("name");
+            let passWord = document.getElementById("password");
+            let checkButton = document.getElementById("check");
+            checkButton.addEventListener("click", function(){
+                if (passWord.value === "govno" && doc.value !== ""){
+                    alert("Успех");}
+                else{
+                    alert("Не указано имя или введен неверный пароль");
+                };
+            });
+        })
+        
+    </script>
+</head>
+<body>
+    <div id ="container">
+        <div id="log" class="d">Login</div>
+        <div class="name_of_field">Email:</div>
+        <input type="text" placeholder="Enter email" email id="name" class="input_field">
+        <div class="name_of_field">Password:</div>
+        <input type="password" id="password" class="input_field"placeholder="Enter password">
+        <div class="show_password"><input type="checkbox"/>Show password</div>
+        <button id="check">SIGN IN</button>
+        <div class="links" id="forgot">Forgot <a href="">Username / Password</a>?</div>
+        <div class="links">Don't have an account?<a href=""> Sign up</a></div>  
+    </div>
+</body>
+</html>
