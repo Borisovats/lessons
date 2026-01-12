@@ -1,15 +1,12 @@
 body {
   background-image: url("dc16a335-011d-4dd9-a90e-f06265126dd7.png");
-
   background-size: cover;
   color: rgb(255, 255, 255);
   font-family: "Montserrat";
   text-align: center;
+  overflow: hidden;
 }
-/* #wrapper{
-  padding-top: 200px;
 
-} */
 @font-face {
   font-family: "Montserrat";
   src: url("Montserrat-VariableFont_wght.ttf");
@@ -141,8 +138,7 @@ a {
 #reg {
   font-weight: bold;
 }
-.snow{
-  background-color: transparent;
+#snow{
   width: 45px;
   height: 30px;
   position: absolute;
