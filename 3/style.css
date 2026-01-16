@@ -15,7 +15,8 @@ body {
   font-family: "tabler-icons-200-filled";
   src: url("tabler-icons.woff2") format("woff2");
 }
-#user, #lock {
+#user,
+#lock {
   font-size: 16px;
 }
 
@@ -30,11 +31,13 @@ body {
   left: 318px;
 }
 #container {
+  position: relative; /* для z index */
   margin: 200px auto;
   backdrop-filter: blur(10px);
   border-radius: 8px;
   width: 395px;
   border: 2px rgba(235, 212, 212, 0.278) solid;
+  z-index:100;
 }
 #log {
   font-size: 32px;
@@ -96,7 +99,6 @@ input:focus,
   margin-left: 40px;
   width: 122px;
   margin-top: 0px;
-
 }
 #forgot {
   display: inline-block;
@@ -138,10 +140,7 @@ a {
 #reg {
   font-weight: bold;
 }
-#snow{
-  width: 45px;
-  height: 30px;
+.snow {
   position: absolute;
-  left: 5px;
-  top: 0px;
+  z-index: 1;
 }
