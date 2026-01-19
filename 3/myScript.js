@@ -5,9 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener("click", function (event) {
-  // новыя снежинка 
-  if (! event.target.closest(".snow")){ // если клик не по снежинке
-  createSnow(event)};
+  // новыя снежинка
+  if (!event.target.closest(".snow")) {
+    // если клик не по снежинке
+    createSnow(event);
+  }
 });
 
 function createSnow(event) {
@@ -17,7 +19,8 @@ function createSnow(event) {
   snowFlake.className = "snow"; // присвоит имя класса
   let randomWidth = Math.random() * 40; // ширина
   let randomHeight = (randomWidth / 3) * 2; // высота с учетом соотношения картинки 3 к 2
-  if (event) { // если был event создаст на месте клика
+  if (event) {
+    // если был event snowFlart создастся на месте клика
     snowFlake.style.left = event.clientX + "px";
     snowFlake.style.top = event.clientY + "px";
   } else {
@@ -37,10 +40,17 @@ function createSnow(event) {
     topPosition = -50;
   }
   let speed = Math.random() * 40; // скорость падения, если одинаковая они все вместе падают сугробом =)
-  snowFlake.addEventListener("click", function () { // удалит через сек при клике
+  snowFlake.addEventListener("click", function () {
+    // удалит через сек при клике
     setTimeout(() => {
       snowFlake.remove();
     }, 1000);
+  });
+  snowFlake.addEventListener("mouseenter", function () {
+    snowFlake.src = "orangesnow.png";
+  });
+  snowFlake.addEventListener("mouseleave", function () {
+    snowFlake.src = "snow.png";
   });
   setInterval(() => {
     topPosition++;
@@ -52,5 +62,4 @@ function createSnow(event) {
       snowFlake.style.left = randomLeft + "px"; // позиция слева меняется
     }
   }, speed);
-  
 }
